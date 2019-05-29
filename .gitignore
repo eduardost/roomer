@@ -1,0 +1,17 @@
+node_modules/*
+package-lock.json
+node_modules/**/*
+.expo/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+./.idea/*
+./package-lock.json
+frontend/__tests__/
+node_modules/
+package-lock.json
+frontend/.expo/
+.DS_Store
+.idea/
