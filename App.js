@@ -41,7 +41,7 @@ app.use(cors()); //securizar
 var port = process.env.PORT || 8081;
 
 // Send message for default URL
-app.get('/', (req, res) => res.send('Hello World with Express API PELIS'));
+app.get('/', (req, res) => res.send('Hello World with Express Roomer!'));
 
 // Use Api routes in the App
 app.use('/apd', apiRoutes);
