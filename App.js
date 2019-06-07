@@ -8,7 +8,8 @@ var app = express();
 
 //conectar BD
 //var urlBD = 'mongodb://localhost/pelis';
-var urlBD = 'mongodb+srv://ratita:uade123@cluster0-ntyc3.mongodb.net/test?retryWrites=true'
+//var urlBD = 'mongodb+srv://ratita:uade123@cluster0-ntyc3.mongodb.net/test?retryWrites=true'
+var urlBD = 'mongodb+srv://ratita:uade123@cluster0-ntyc3.mongodb.net/roomer?retryWrites=true'
 //opciones conexion
 var opts = {useNewUrlParser : true, connectTimeoutMS:20000};
 //importo driver
