@@ -25,9 +25,16 @@ let getUsuarios = (req, res) => {
 let insertUsuario = (req, res) => {
     console.log(req.body);
     var newUsuario = Usuarios({
-        usrId: req.body.usrId,
+        token: req.body.token,
         nombre: req.body.nombre,
-        password: req.body.password
+        apellido: req.body.apellido,
+        sexo: req.body.sexo,
+        edad: req.body.edad,
+        dni: req.body.dni,
+        telefono: req.body.telefono,
+        codArea: req.body.codArea,
+        foto: req.body.foto,
+        descripcion: req.body.descripcion
     });
     newUsuario.save().
         then
