@@ -12,6 +12,6 @@ var filtroSchema = new Schema({
     sexo: String
 });
 
-var Filtro = mongoose.model('Filtros', filtroSchema);
+var Filtros = mongoose.model('Filtros', filtroSchema);
 console.log("se creo modelo filtroSchema");
 module.exports = Filtros;
