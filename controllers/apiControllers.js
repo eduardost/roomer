@@ -233,6 +233,8 @@ module.exports = {
     insertPeli,
     getPelisPorId,
     getPelisPorUsuarioId,
+    getFiltros,
+    insertFiltro,
 };
 
 
