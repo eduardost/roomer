@@ -5,6 +5,9 @@ var Pelis = require('../models/PeliModel');
 const fetch = require('node-fetch');
 //agrego el controlador de Usuarios
 var Usuarios = require('../models/UserModel');
+var Filtros = require('../models/FiltrosModel');
+var Likes = require('../models/LikesModel');
+var Match = require('../models/MatchModel');
 
 const url = "http://www.omdbapi.com/?apikey=d0b64143&";
 
@@ -67,6 +70,44 @@ let buscarUsuario = (req, res) => {
         (err)=>{console.log(err);}*/
         )
 }
+//metodos Filtros
+let getFiltros = (req, res) => {
+    console.log("llegue a leer Filtros");
+    //Listar resultados
+    Filtros.find()
+        .then
+        (
+            (listaFiltros) => {
+                res.send(listaFiltros); //devuelvo resultado query       
+            },
+            (err) => { console.log(err); }
+        )
+};
+
+let insertFiltro = (req, res) => {
+    console.log(req.body);
+    var newFiltro = Filtros({
+        token: req.body.token,
+        barrio: req.body.barrio,
+        dineroMin: req.body.dineroMin,
+        dineroMax: req.body.dineroMax,
+        edadMin: req.body.edadMin,
+        edadMax: req.body.edadMax,
+        sexo: req.body.sexo
+    });
+    newFiltro.save().
+        then
+        (
+            (newFiltro) => {
+                res.send(newFiltro); //devuelvo resultado query       
+            },
+            (err) => { console.log(err); }
+        )
+}
+//metodos Likes
+//metodos Match
+
+
 //para mostrar por Id
 let getPelisPorId = (req, res) => {
     console.log(req.body);
