@@ -5,9 +5,9 @@ var Pelis = require('../models/PeliModel');
 const fetch = require('node-fetch');
 //agrego el controlador de Usuarios
 var Usuarios = require('../models/UserModel');
-var Filtros = require('../models/FiltrosModel');
-var Likes = require('../models/LikesModel');
-var Match = require('../models/MatchModel');
+//var Filtros = require('../models/FiltrosModel');
+//var Likes = require('../models/LikesModel');
+//var Match = require('../models/MatchModel');
 
 const url = "http://www.omdbapi.com/?apikey=d0b64143&";
 
@@ -70,7 +70,8 @@ let buscarUsuario = (req, res) => {
         (err)=>{console.log(err);}*/
         )
 }
-//metodos Filtros
+
+/*//metodos Filtros
 let getFiltros = (req, res) => {
     console.log("llegue a leer Filtros");
     //Listar resultados
@@ -104,6 +105,7 @@ let insertFiltro = (req, res) => {
             (err) => { console.log(err); }
         )
 }
+*/
 //metodos Likes
 //metodos Match
 

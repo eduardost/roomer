@@ -88,7 +88,7 @@ router.get('/getPelisPorUsuarioId',function(req,res)
     apiController.getPelisPorUsuarioId(req,res);
 });
 
-
+/*
 //EndPoint para leer Filtros
 router.get('/leerFiltros',function(req,res)
 {
@@ -101,7 +101,7 @@ router.post('/insertFiltro',function(req,res)
     console.log(req.body);
     apiController.insertFiltro(req,res);
 });
-
+*/
 
 // Export API routes
 module.exports = router;
