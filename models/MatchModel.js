@@ -8,5 +8,5 @@ var matchSchema = new Schema({
 });
 
 var Match = mongoose.model('Match', matchSchema);
-console.log("se creo modelo Match");
+console.log("se creo modelo Match.");
 module.exports = Match;

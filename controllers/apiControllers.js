@@ -157,7 +157,7 @@ let insertLike = (req, res) => {
 
 //metodos Match
 let getMatch = (req, res) => {
-    console.log("llegue a leer Match");
+    console.log("llegue a leer Match.");
     //Listar resultados
     Match.find()
         .then
