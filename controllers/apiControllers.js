@@ -6,7 +6,7 @@ const fetch = require('node-fetch');
 //agrego el controlador de Usuarios
 var Usuarios = require('../models/UserModel');
 var Filtros = require('../models/FiltrosModel');
-//var Likes = require('../models/LikesModel');
+var Likes = require('../models/LikesModel');
 //var Match = require('../models/MatchModel');
 
 const url = "http://www.omdbapi.com/?apikey=d0b64143&";
@@ -108,6 +108,36 @@ let insertFiltro = (req, res) => {
 }
 
 //metodos Likes
+let getLikes = (req, res) => {
+    console.log("llegue a leer Likes");
+    //Listar resultados
+    Likes.find()
+        .then
+        (
+            (listaLikes) => {
+                res.send(listaLikes); //devuelvo resultado query       
+            },
+            (err) => { console.log(err); }
+        )
+};
+
+let insertLike = (req, res) => {
+    console.log(req.body);
+    console.log("llegue a insertar Like");
+    var newLike = Likes({
+        token: req.body.token,
+        like: req.body.like
+    });
+    newLike.save().
+        then
+        (
+            (newLike) => {
+                res.send(newLike); //devuelvo resultado query       
+            },
+            (err) => { console.log(err); }
+        )
+}
+
 //metodos Match
 
 
@@ -238,6 +268,8 @@ module.exports = {
     getPelisPorUsuarioId,
     getFiltros,
     insertFiltro,
+    getLikes,
+    insertLike,
 };
 
 

@@ -102,6 +102,21 @@ router.post('/insertarFiltro',function(req,res)
     apiController.insertFiltro(req,res);
 });
 
+//EndPoint para leer Likes
+router.get('/leerLikes',function(req,res)
+{
+    console.log("leer");
+    apiController.getLikes(req,res);
+});
+//agrego EndPoint para insertar Like
+router.post('/insertarLike',function(req,res)
+{
+    console.log(req.body);
+    apiController.insertLike(req,res);
+});
+
+
+
 
 // Export API routes
 module.exports = router;
