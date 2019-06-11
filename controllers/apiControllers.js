@@ -25,6 +25,20 @@ let getUsuarios = (req, res) => {
         )
 };
 
+let getUsuariosPorToken = (req, res) => {
+    console.log("llegue a leer usuarios por token");
+    //Listar resultados
+    Usuarios.find()
+        .then
+        (
+            (listaUsuarios) => {
+                res.send(listaUsuarios); //devuelvo resultado query       
+            },
+            (err) => { console.log(err); }
+        )
+};
+
+
 let insertUsuario = (req, res) => {
     console.log(req.body);
     var newUsuario = Usuarios({
@@ -301,6 +315,7 @@ module.exports = {
     insertLike,
     getMatch,
     insertMatch,
+    getUsuariosPorToken,
 };
 
 

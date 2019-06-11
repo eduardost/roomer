@@ -130,6 +130,12 @@ router.post('/insertarMatch',function(req,res)
 });
 
 
+//EndPoint para leer toda la base de usuarios
+router.get('/getUsuariosPorToken',function(req,res)
+{
+    console.log("leer");
+    apiController.getUsuariosPorToken(req,res);
+});
 
 // Export API routes
 module.exports = router;
