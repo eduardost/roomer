@@ -96,7 +96,7 @@ router.get('/leerFiltros',function(req,res)
     apiController.getFiltros(req,res);
 });
 //agrego EndPoint para insertar Filtro
-router.post('/insertFiltro',function(req,res)
+router.post('/insertarFiltro',function(req,res)
 {
     console.log(req.body);
     apiController.insertFiltro(req,res);
