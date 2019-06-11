@@ -139,14 +139,14 @@ let insertLike = (req, res) => {
 }
 
 //metodos Match
-let getMatches = (req, res) => {
-    console.log("llegue a leer Matches");
+let getMatch = (req, res) => {
+    console.log("llegue a leer Match");
     //Listar resultados
     Match.find()
         .then
         (
-            (listaMatches) => {
-                res.send(listaMatches); //devuelvo resultado query       
+            (listaMatch) => {
+                res.send(listaMatch); //devuelvo resultado query       
             },
             (err) => { console.log(err); }
         )
@@ -299,7 +299,7 @@ module.exports = {
     insertFiltro,
     getLikes,
     insertLike,
-    getMatches,
+    getMatch,
     insertMatch,
 };
 

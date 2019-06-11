@@ -116,11 +116,11 @@ router.post('/insertarLike',function(req,res)
 });
 
 
-//EndPoint para leer Matches
-router.get('/leerMatches',function(req,res)
+//EndPoint para leer Match
+router.get('/leerMatch',function(req,res)
 {
     console.log("leer");
-    apiController.getMatches(req,res);
+    apiController.getMatch(req,res);
 });
 //agrego EndPoint para insertar Match
 router.post('/insertarMatch',function(req,res)
