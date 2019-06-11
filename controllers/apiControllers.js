@@ -87,6 +87,7 @@ let getFiltros = (req, res) => {
 
 let insertFiltro = (req, res) => {
     console.log(req.body);
+    console.log("llegue a insertar Filtros");
     var newFiltro = Filtros({
         token: req.body.token,
         barrio: req.body.barrio,
