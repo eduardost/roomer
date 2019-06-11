@@ -7,7 +7,7 @@ const fetch = require('node-fetch');
 var Usuarios = require('../models/UserModel');
 var Filtros = require('../models/FiltrosModel');
 var Likes = require('../models/LikesModel');
-//var Match = require('../models/MatchModel');
+var Match = require('../models/MatchModel');
 
 const url = "http://www.omdbapi.com/?apikey=d0b64143&";
 
@@ -142,7 +142,7 @@ let insertLike = (req, res) => {
 let getMatches = (req, res) => {
     console.log("llegue a leer Matches");
     //Listar resultados
-    Matches.find()
+    Match.find()
         .then
         (
             (listaMatches) => {
@@ -155,7 +155,7 @@ let getMatches = (req, res) => {
 let insertMatch = (req, res) => {
     console.log(req.body);
     console.log("llegue a insertar Match");
-    var newMatch = Likes({
+    var newMatch = Match({
         token: req.body.token,
         match: req.body.match
     });
