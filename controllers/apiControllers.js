@@ -28,7 +28,10 @@ let getUsuarios = (req, res) => {
 let getUsuariosPorToken = (req, res) => {
     console.log("llegue a leer usuarios por token");
     //Listar resultados
+    let token = req.query.token;
+    console.log(token);
     Usuarios.find()
+
         .then
         (
             (listaUsuarios) => {
