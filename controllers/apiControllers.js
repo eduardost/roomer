@@ -139,6 +139,35 @@ let insertLike = (req, res) => {
 }
 
 //metodos Match
+let getMatches = (req, res) => {
+    console.log("llegue a leer Matches");
+    //Listar resultados
+    Matches.find()
+        .then
+        (
+            (listaMatches) => {
+                res.send(listaMatches); //devuelvo resultado query       
+            },
+            (err) => { console.log(err); }
+        )
+};
+
+let insertMatch = (req, res) => {
+    console.log(req.body);
+    console.log("llegue a insertar Match");
+    var newMatch = Likes({
+        token: req.body.token,
+        match: req.body.match
+    });
+    newMatch.save().
+        then
+        (
+            (newMatch) => {
+                res.send(newMatch); //devuelvo resultado query       
+            },
+            (err) => { console.log(err); }
+        )
+}
 
 
 //para mostrar por Id
@@ -270,6 +299,8 @@ module.exports = {
     insertFiltro,
     getLikes,
     insertLike,
+    getMatches,
+    insertMatch,
 };
 
 

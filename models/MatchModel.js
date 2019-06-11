@@ -7,6 +7,6 @@ var matchSchema = new Schema({
     match: String,
 });
 
-var Filtro = mongoose.model('Match', matchSchema);
-console.log("se creo modelo matchSchema");
+var Match = mongoose.model('Match', matchSchema);
+console.log("se creo modelo Match");
 module.exports = Match;

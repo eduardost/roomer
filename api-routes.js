@@ -116,6 +116,19 @@ router.post('/insertarLike',function(req,res)
 });
 
 
+//EndPoint para leer Matches
+router.get('/leerMatches',function(req,res)
+{
+    console.log("leer");
+    apiController.getMatches(req,res);
+});
+//agrego EndPoint para insertar Match
+router.post('/insertarMatch',function(req,res)
+{
+    console.log(req.body);
+    apiController.insertMatch(req,res);
+});
+
 
 
 // Export API routes

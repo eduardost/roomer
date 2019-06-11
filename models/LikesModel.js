@@ -8,5 +8,5 @@ var likeSchema = new Schema({
 });
 
 var Likes = mongoose.model('Likes', likeSchema);
-console.log("se creo modelo likeSchema");
+console.log("se creo modelo like");
 module.exports = Likes;

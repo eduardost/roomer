@@ -13,5 +13,5 @@ var filtroSchema = new Schema({
 });
 
 var Filtros = mongoose.model('Filtros', filtroSchema);
-console.log("se creo modelo filtroSchema");
+console.log("se creo modelo filtro");
 module.exports = Filtros;
