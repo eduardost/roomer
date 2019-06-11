@@ -68,9 +68,9 @@ router.post('/buscarUsuario',function(req,res) {
 });
 
 //EndPoint para leer toda la base de usuarios
-router.get('/leerUsuarios',function(req,res)
+router.get('/getUsuarios',function(req,res)
 {
-    console.log("leer");
+    console.log("getUsuarios");
     apiController.getUsuarios(req,res);
 });
 
@@ -90,22 +90,22 @@ router.get('/getPelisPorUsuarioId',function(req,res)
 
 
 //EndPoint para leer Filtros
-router.get('/leerFiltros',function(req,res)
+router.get('/getFiltros',function(req,res)
 {
-    console.log("leer");
+    console.log("getFiltros");
     apiController.getFiltros(req,res);
 });
 //agrego EndPoint para insertar Filtro
-router.post('/insertarFiltro',function(req,res)
+router.post('/insertFiltro',function(req,res)
 {
     console.log(req.body);
     apiController.insertFiltro(req,res);
 });
 
 //EndPoint para leer Likes
-router.get('/leerLikes',function(req,res)
+router.get('/getLikes',function(req,res)
 {
-    console.log("leer");
+    console.log("getLikes");
     apiController.getLikes(req,res);
 });
 //agrego EndPoint para insertar Like
@@ -117,13 +117,13 @@ router.post('/insertarLike',function(req,res)
 
 
 //EndPoint para leer Match
-router.get('/leerMatch',function(req,res)
+router.get('/getMatch',function(req,res)
 {
-    console.log("leer");
+    console.log("getMatch");
     apiController.getMatch(req,res);
 });
 //agrego EndPoint para insertar Match
-router.post('/insertarMatch',function(req,res)
+router.post('/insertMatch',function(req,res)
 {
     console.log(req.body);
     apiController.insertMatch(req,res);
