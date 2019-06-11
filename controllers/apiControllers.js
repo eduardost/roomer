@@ -138,6 +138,20 @@ let getLikes = (req, res) => {
         )
 };
 
+let getLikesPorToken = (req, res) => {
+    console.log("llegue a leer Likes");
+    //Listar resultados
+    let token = req.query.token;
+    Likes.find({token: token})
+        .then
+        (
+            (listaLikes) => {
+                res.send(listaLikes); //devuelvo resultado query       
+            },
+            (err) => { console.log(err); }
+        )
+};
+
 let insertLike = (req, res) => {
     console.log(req.body);
     console.log("llegue a insertar Like");
@@ -319,6 +333,7 @@ module.exports = {
     getMatch,
     insertMatch,
     getUsuariosPorToken,
+    getLikesPorToken,
 };
 
 
