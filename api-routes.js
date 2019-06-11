@@ -145,5 +145,20 @@ router.get('/getLikesPorToken',function(req,res)
 });
 
 
+//EndPoint para leer toda la base de usuarios
+router.get('/getFiltrosPorToken',function(req,res)
+{
+    console.log("leer");
+    apiController.getFiltrosPorToken(req,res);
+});
+
+//EndPoint para leer toda la base de usuarios
+router.get('/getMatchPorToken',function(req,res)
+{
+    console.log("leer");
+    apiController.getMatchPorToken(req,res);
+});
+
+
 // Export API routes
 module.exports = router;

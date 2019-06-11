@@ -102,6 +102,20 @@ let getFiltros = (req, res) => {
         )
 };
 
+let getFiltrosPorToken = (req, res) => {
+    console.log("llegue a leer Filtros");
+    //Listar resultados
+    let token = req.query.token;
+    Filtros.find({token: token})
+        .then
+        (
+            (listaFiltros) => {
+                res.send(listaFiltros); //devuelvo resultado query       
+            },
+            (err) => { console.log(err); }
+        )
+};
+
 let insertFiltro = (req, res) => {
     console.log(req.body);
     console.log("llegue a insertar Filtros");
@@ -182,6 +196,22 @@ let getMatch = (req, res) => {
             (err) => { console.log(err); }
         )
 };
+
+let getMatchPorToken = (req, res) => {
+    console.log("llegue a leer Match.");
+    //Listar resultados
+    let token = req.query.token;
+    Match.find({token: token})
+        .then
+        (
+            (listaMatch) => {
+                res.send(listaMatch); //devuelvo resultado query       
+            },
+            (err) => { console.log(err); }
+        )
+};
+
+
 
 let insertMatch = (req, res) => {
     console.log(req.body);
@@ -334,6 +364,8 @@ module.exports = {
     insertMatch,
     getUsuariosPorToken,
     getLikesPorToken,
+    getFiltrosPorToken,
+    getMatchPorToken,
 };
 
 
