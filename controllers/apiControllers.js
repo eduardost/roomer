@@ -5,7 +5,7 @@ var Pelis = require('../models/PeliModel');
 const fetch = require('node-fetch');
 //agrego el controlador de Usuarios
 var Usuarios = require('../models/UserModel');
-//var Filtros = require('../models/FiltrosModel');
+var Filtros = require('../models/FiltrosModel');
 //var Likes = require('../models/LikesModel');
 //var Match = require('../models/MatchModel');
 
