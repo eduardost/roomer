@@ -30,7 +30,7 @@ let getUsuariosPorToken = (req, res) => {
     //Listar resultados
     let token = req.query.token;
     console.log(token);
-    Usuarios.find()
+    Usuarios.find({token: token})
 
         .then
         (
