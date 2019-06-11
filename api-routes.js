@@ -109,7 +109,7 @@ router.get('/getLikes',function(req,res)
     apiController.getLikes(req,res);
 });
 //agrego EndPoint para insertar Like
-router.post('/insertarLike',function(req,res)
+router.post('/insertLike',function(req,res)
 {
     console.log(req.body);
     apiController.insertLike(req,res);
