@@ -71,7 +71,7 @@ let buscarUsuario = (req, res) => {
         )
 }
 
-/*//metodos Filtros
+//metodos Filtros
 let getFiltros = (req, res) => {
     console.log("llegue a leer Filtros");
     //Listar resultados
@@ -105,7 +105,7 @@ let insertFiltro = (req, res) => {
             (err) => { console.log(err); }
         )
 }
-*/
+
 //metodos Likes
 //metodos Match
 
