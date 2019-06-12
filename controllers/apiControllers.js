@@ -46,6 +46,7 @@ let insertUsuario = (req, res) => {
     console.log(req.body);
     var newUsuario = Usuarios({
         token: req.body.token,
+        mail: req.body.mail,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         sexo: req.body.sexo,
